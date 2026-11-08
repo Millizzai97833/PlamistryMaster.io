@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101126">
+  <meta name="description" content="Palmistry Master AI - Explore traditional palmistry interpretations.">
+  <title>Palmistry Master AI | Shahab Millizai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">✋</div>
+      <div>
+        <h1>Palmistry Master AI</h1>
+        <small>Traditional Palm Reading</small>
+      </div>
+    </div>
+    <select id="language" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ur">اردو</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="tag">✦ DISCOVER YOUR PALM ✦</span>
+      <h2>Explore the Secrets of Your Palm</h2>
+      <p>Upload a palm photograph and explore traditional interpretations of its major lines.</p>
+    </section>
+
+    <section class="panel">
+      <h2 id="uploadTitle">Upload Your Palm Photograph</h2>
+      <div class="hand-options">
+        <label><input type="radio" name="hand" value="Left Hand" checked> Left Hand</label>
+        <label><input type="radio" name="hand" value="Right Hand"> Right Hand</label>
+        <label><input type="radio" name="hand" value="Both Hands"> Both Hands</label>
+      </div>
+
+      <label class="upload-area" for="palmImage">
+        <span class="upload-icon">📷</span>
+        <strong>Choose Palm Photograph</strong>
+        <span>JPG, PNG or WEBP</span>
+        <input id="palmImage" type="file" accept="image/jpeg,image/png,image/webp">
+      </label>
+
+      <img id="preview" class="preview" alt="Palm photograph preview" hidden>
+
+      <button id="clearImage" class="secondary" hidden>Remove Photograph</button>
+    </section>
+
+    <section class="panel">
+      <h2 id="linesTitle">Explore Palm Lines</h2>
+      <p>Select the lines you can see clearly in your palm.</p>
+
+      <div class="line-grid">
+        <label class="line-card">
+          <input type="checkbox" value="heart">
+          <span>❤️</span>
+          <strong>Heart Line</strong>
+          <small>Emotions and relationships</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="head">
+          <span>🧠</span>
+          <strong>Head Line</strong>
+          <small>Thinking and decisions</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="life">
+          <span>🌿</span>
+          <strong>Life Line</strong>
+          <small>Vitality and life approach</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="fate">
+          <span>⭐</span>
+          <strong>Fate Line</strong>
+          <small>Career and direction</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="sun">
+          <span>☀️</span>
+          <strong>Sun Line</strong>
+          <small>Creativity and recognition</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="mercury">
+          <span>💬</span>
+          <strong>Mercury Line</strong>
+          <small>Communication and expression</small>
+        </label>
+
+        <label class="line-card">
+          <input type="checkbox" value="marriage">
+          <span>💞</span>
+          <strong>Relationship Lines</strong>
+          <small>Traditional relationship symbolism</small>
+        </label>
+      </div>
+
+      <button id="generate" class="primary">Generate Palm Reading ✨</button>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+
+    <section class="panel report" id="report" hidden>
+      <h2>✦ Your Palm Reading Report</h2>
+      <p id="reportHand"></p>
+      <div id="reportContent"></div>
+      <div class="report-actions">
+        <button id="copyReport" class="primary">Copy Report</button>
+        <button id="printReport" class="secondary">Print Report</button>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Important Disclaimer</strong>
+      <p>Palmistry is a traditional cultural practice, not a scientifically validated method of predicting personality, health, relationships or future events. Interpretations are for entertainment and reflection only.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by <strong>Shahab Millizai</strong></p>
+    <p>© <span id="year"></span> Palmistry Master AI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
+  
